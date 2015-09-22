@@ -1,5 +1,5 @@
 class ContactMailer < ActionMailer::Base
-    default to = 'abhinav.girotra@gmail.com'
+    default to: 'abhinav.girotra@gmail.com'
     
     def contact_email(name, email, body)
         @name = name
@@ -7,7 +7,6 @@ class ContactMailer < ActionMailer::Base
         @body = body 
         
         mail(from: email, subject: 'Ruby Contact Form Message')
-    
     end
     
 
