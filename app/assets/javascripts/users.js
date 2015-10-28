@@ -10,7 +10,7 @@ $(document).ready(function() {
         expMonth = $('#card_month').val(),
         expYear = $('#card_year').val();
 
-flash[:notice] = "In users.js"
+alert("In users.js");
 
     if (!error) {
       // Get the Stripe token:
