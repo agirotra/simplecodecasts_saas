@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   
   def save_with_payment
     if valid?
+      flash[:notice] = "email: + "email""
       customer = Stripe::Customer.create(description: email, plan: plan_id, source: stripe_card_token)
       self.stripe_customer_token = customer.id
 
