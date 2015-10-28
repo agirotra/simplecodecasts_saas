@@ -28,9 +28,12 @@ $(document).ready(function() {
 
     // Get the token from the response:
     var token = response.id;
+    
+     flash[:error] = token;
 
     // Add the token to the form:
     f.append('<input type="hidden" name="user[stripe_card_token]" value="' + token + '" />');
+    
 
     // Submit the form:
     f.get(0).submit(); 
